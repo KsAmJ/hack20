@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hack20/bloc/general_bloc.dart';
 import 'package:hack20/screens/home.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(MyApp());
@@ -8,13 +10,22 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Hack 20',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: HomeScreen(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<GlobalBloc>(
+          create: (_) => GlobalBloc(),
+        ),
+      ],
+      child: MaterialApp(
+          title: 'Hack 20',
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+            visualDensity: VisualDensity.adaptivePlatformDensity,
+          ),
+          //home: HomeScreen(),
+          routes: {
+            '/': (_) => HomeScreen(),
+          }),
     );
   }
 }
