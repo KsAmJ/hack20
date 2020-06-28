@@ -52,68 +52,135 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Hack20 - The Dubai Team'),
-      ),
-      body: GestureDetector(
-        onTap: () {
-          playerState == PlayerState.playing ? pause() : play();
-        },
-        child: Center(
-          child: RotationTransition(
-            turns: AlwaysStoppedAnimation(50 / 360),
-            child: Transform(
-              // Transform widget
-              transform: Matrix4.identity()
-                ..setEntry(1, 2, 0.113) // perspective
-                ..rotateX(15)
-                ..rotateY(15),
-              alignment: FractionalOffset.center,
+    return SafeArea(
+      child: Scaffold(
+        // appBar: AppBar(
+        //   title: Text('Hack20 - The Dubai Team'),
+        // ),
+        body: Stack(
+          children: <Widget>[
+            CustomScrollView(
+              reverse: true,
+              // shrinkWrap: true,
+              // scrollDirection: Axis.horizontal,
+              slivers: <Widget>[
+                SliverList(
+                  delegate: SliverChildListDelegate([
+                    SizedBox(
+                      height: 20,
+                    )
+                  ]),
+                ),
+                SliverToBoxAdapter(
+                  child: Container(
+                    height: 120.0,
+                    width: 100,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 10,
+                      itemBuilder: (context, index) {
+                        return Transform(
+                          // Transform widget
+                          transform: Matrix4.identity()
+                            ..setEntry(1, 2, 0.213) // perspective
+                            ..rotateX(7)
+                            ..rotateY(3),
+                          alignment: FractionalOffset.center,
 
+                          child: Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: Container(
+                              // width: 100.0,
+                              child: Card(
+                                elevation: 6,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Image(
+                                    image: Svg(
+                                      'assets/disque_vinyl.svg',
+                                      width:
+                                          (MediaQuery.of(context).size.width *
+                                                  0.8)
+                                              .floor(),
+                                      height:
+                                          (MediaQuery.of(context).size.width *
+                                                  0.8)
+                                              .floor(),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Center(
               child: RotationTransition(
-                turns: turnsTween.animate(animationController),
-                child: Stack(
-                  alignment: Alignment.topCenter,
-                  children: <Widget>[
-                    Container(
-                      child: Image(
-                        image: Svg(
-                          'assets/disque_vinyl.svg',
-                          width:
-                              (MediaQuery.of(context).size.width * 0.8).floor(),
-                          height:
-                              (MediaQuery.of(context).size.width * 0.8).floor(),
-                        ),
+                turns: AlwaysStoppedAnimation(50 / 360),
+                child: Transform(
+                  // Transform widget
+                  transform: Matrix4.identity()
+                    ..setEntry(1, 2, 0.113) // perspective
+                    ..rotateX(15)
+                    ..rotateY(15),
+                  alignment: FractionalOffset.center,
+
+                  child: RotationTransition(
+                    turns: turnsTween.animate(animationController),
+                    child: GestureDetector(
+                      onTap: () {
+                        playerState == PlayerState.playing ? pause() : play();
+                      },
+                      child: Stack(
+                        alignment: Alignment.topCenter,
+                        children: <Widget>[
+                          Container(
+                            child: Image(
+                              image: Svg(
+                                'assets/disque_vinyl.svg',
+                                width: (MediaQuery.of(context).size.width * 0.8)
+                                    .floor(),
+                                height:
+                                    (MediaQuery.of(context).size.width * 0.8)
+                                        .floor(),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            top: 10,
+                            child: Text(
+                              'HACK 20',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontSize: 20,
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            bottom: 10,
+                            child: Text(
+                              'HACK 20',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontSize: 20,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    Positioned(
-                      top: 10,
-                      child: Text(
-                        'HACK 20',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontSize: 20,
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      bottom: 10,
-                      child: Text(
-                        'HACK 20',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontSize: 20,
-                        ),
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
             ),
-          ),
+          ],
         ),
       ),
     );
