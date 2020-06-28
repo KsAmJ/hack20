@@ -1,6 +1,6 @@
 # hack20
 
-A new Flutter project.
+A new Flutter project for HACK20
 
 ## Getting Started
 
