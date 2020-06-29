@@ -1,6 +1,6 @@
-# hack20
+# Gramophone MP3 Player - Hack20
 
-A new Flutter project for HACK20
+A Gramophone MP3 Player for HACK20
 
 ## Getting Started
 

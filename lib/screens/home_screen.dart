@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:audioplayer/audioplayer.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
   Duration position;
   List<File> files = [];
   AudioPlayer audioPlayer = AudioPlayer();
-
+  File selectedFile;
   String localFilePath;
 
   PlayerState playerState = PlayerState.stopped;
@@ -40,6 +41,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
   int selectedIndex = -1;
   bool isMuted = false;
   var _handleWidth = -100;
+  bool isSlider = true;
 
   String audioURL =
       'https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_700KB.mp3';
@@ -54,7 +56,6 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
   Tween<double> handleTween;
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     animationController =
         AnimationController(vsync: this, duration: Duration(seconds: 5));
@@ -189,7 +190,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                   AudioButton(
                     icon: Icons.fast_rewind,
                     handler: () {
-                      playPrevious();
+                      play(isPrev: true);
                     },
                   ),
                   SizedBox(
@@ -216,24 +217,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                   AudioButton(
                     icon: Icons.fast_forward,
                     handler: () {
-                      playNext();
-                    },
-                  ),
-                  SizedBox(
-                    width: screenSize.width * 0.04,
-                  ),
-                  AudioButton(
-                    icon: Icons.add,
-                    handler: () async {
-                      var selelectedFiles = await FilePicker.getMultiFile(
-                        type: FileType.custom,
-                        allowedExtensions: ['mp3', 'wav', 'm4a'],
-                      );
-                      if (selelectedFiles != null) {
-                        setState(() {
-                          files.addAll(selelectedFiles);
-                        });
-                      }
+                      play(isNext: true);
                     },
                   ),
                 ],
@@ -241,66 +225,180 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
               SizedBox(
                 height: 20,
               ),
-              Expanded(
-                child: ListView.builder(
-                  padding: EdgeInsets.only(right: 15, left: 15),
-                  itemCount: files.length,
-                  itemBuilder: (context, index) {
-                    return GestureDetector(
-                      child: InkWell(
-                        onTap: () {
-                          setState(() {
-                            audioURL = files[index].path;
-                            selectedIndex = index;
-                          });
-                          stop();
-                          play();
-                        },
-                        child: Container(
-                          margin: EdgeInsets.only(bottom: 15),
-                          padding: EdgeInsets.symmetric(
-                              vertical: 20, horizontal: 15),
-                          decoration: BoxDecoration(
-                            color: Color(0xFFE6C8A3),
-                            borderRadius: BorderRadius.circular(40),
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              Container(
-                                width: MediaQuery.of(context).size.width * 0.6,
-                                child: Text(
-                                  files[index].path.split('/').last,
-                                  textScaleFactor: 1,
-                                  maxLines: null,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                    color: selectedIndex == index
-                                        ? Colors.deepOrange[900]
-                                        : Colors.black,
+              isSlider
+                  ? Expanded(
+                      child: CarouselSlider(
+                        options: CarouselOptions(
+                          aspectRatio: 16 / 9,
+                          viewportFraction: 0.8,
+                          initialPage: 0,
+                          enableInfiniteScroll: true,
+                          reverse: false,
+                          autoPlay: false,
+                          autoPlayInterval: Duration(seconds: 3),
+                          autoPlayAnimationDuration:
+                              Duration(milliseconds: 800),
+                          autoPlayCurve: Curves.fastOutSlowIn,
+                          enlargeCenterPage: true,
+                        ),
+                        items: files.map((file) {
+                          return Builder(
+                            builder: (BuildContext context) {
+                              return InkWell(
+                                onTap: () {
+                                  setState(() {
+                                    selectedFile = file;
+                                    audioURL = selectedFile.path;
+                                    selectedIndex = files.indexOf(selectedFile);
+                                  });
+                                  stop();
+                                  play();
+                                },
+                                child: Card(
+                                  elevation: 10,
+                                  color: file == selectedFile
+                                      ? Colors.brown[600]
+                                      : Colors.brown[400],
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width,
+                                    margin:
+                                        EdgeInsets.symmetric(horizontal: 5.0),
+                                    child: Container(
+                                      width: MediaQuery.of(context).size.width,
+                                      margin:
+                                          EdgeInsets.symmetric(horizontal: 5.0),
+                                      decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(20))),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: <Widget>[
+                                          Image(
+                                            image: Svg(
+                                              'assets/disque_vinyl.svg',
+                                              width: (screenSize.width * 0.3)
+                                                  .floor(),
+                                              height: (screenSize.width * 0.3)
+                                                  .floor(),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 20,
+                                          ),
+                                          Text(
+                                            '${file.path.split('/').last}',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Image(
-                                image: Svg(
-                                  'assets/disque_vinyl.svg',
-                                  //width: (screenSize.width * 0.2).floor(),
-                                  height: 50,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
+                              );
+                            },
+                          );
+                        }).toList(),
                       ),
-                      onTap: () {},
-                    );
-                  },
+                    )
+                  : Expanded(
+                      child: ListView.builder(
+                        padding: EdgeInsets.only(right: 15, left: 15),
+                        itemCount: files.length,
+                        itemBuilder: (context, index) {
+                          return buildSongListTile(index, context);
+                        },
+                      ),
+                    ),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    AudioButton(
+                      icon: !isSlider ? Icons.collections_bookmark : Icons.list,
+                      handler: () {
+                        setState(() {
+                          isSlider = !isSlider;
+                        });
+                      },
+                    ),
+                    SizedBox(
+                      width: screenSize.width * 0.04,
+                    ),
+                    AudioButton(
+                      icon: Icons.add,
+                      handler: () async {
+                        var selelectedFiles = await FilePicker.getMultiFile(
+                          type: FileType.custom,
+                          allowedExtensions: ['mp3', 'wav', 'm4a'],
+                        );
+                        if (selelectedFiles != null) {
+                          setState(() {
+                            files.addAll(selelectedFiles);
+                          });
+                        }
+                      },
+                    ),
+                  ],
                 ),
               ),
             ],
           ),
         ),
       ),
+    );
+  }
+
+  GestureDetector buildSongListTile(int index, BuildContext context) {
+    return GestureDetector(
+      child: InkWell(
+        onTap: () {
+          setState(() {
+            audioURL = files[index].path;
+            selectedIndex = index;
+          });
+          stop();
+          play();
+        },
+        child: Container(
+          margin: EdgeInsets.only(bottom: 15),
+          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+          decoration: BoxDecoration(
+            color: Color(0xFFE6C8A3),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Container(
+                width: MediaQuery.of(context).size.width * 0.6,
+                child: Text(
+                  files[index].path.split('/').last,
+                  textScaleFactor: 1,
+                  maxLines: null,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    color: selectedIndex == index
+                        ? Colors.deepOrange[900]
+                        : Colors.black,
+                  ),
+                ),
+              ),
+              Image(
+                image: Svg(
+                  'assets/disque_vinyl.svg',
+                  height: 50,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+      onTap: () {},
     );
   }
 
@@ -321,10 +419,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
       if (s == AudioPlayerState.PLAYING) {
         setState(() => duration = audioPlayer.duration);
       } else if (s == AudioPlayerState.STOPPED) {
-        //onComplete();
-
         animationController.stop();
-
         setState(() {
           position = duration;
         });
@@ -339,8 +434,28 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
     });
   }
 
-  Future play() async {
-    await audioPlayer.play(audioURL, isLocal: false);
+  Future play({bool isNext = false, bool isPrev = false}) async {
+    if (isNext || isPrev) {
+      if (isNext) {
+        if (selectedIndex > -1 && selectedIndex < files.length - 1) {
+          selectedIndex++;
+        } else if (selectedIndex == files.length - 1) {
+          selectedIndex = 0;
+        }
+      }
+
+      if (isPrev) {
+        if (selectedIndex > 0 && selectedIndex < files.length) {
+          selectedIndex--;
+        } else if (selectedIndex == 0) {
+          selectedIndex = files.length - 1;
+        }
+      }
+      selectedFile = files[selectedIndex];
+      audioURL = files[selectedIndex].path;
+      await audioPlayer.stop();
+    }
+    await audioPlayer.play(audioURL);
     animationController.reset();
     animationController.repeat();
     setState(() {
@@ -361,38 +476,6 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
     animationController.stop();
     setState(() {
       playerState = PlayerState.stopped;
-    });
-  }
-
-  Future playNext() async {
-    if (selectedIndex > -1 && selectedIndex < files.length - 1) {
-      selectedIndex++;
-    } else if (selectedIndex == files.length - 1) {
-      selectedIndex = 0;
-    }
-    audioURL = files[selectedIndex].path;
-    await audioPlayer.stop();
-    await audioPlayer.play(audioURL, isLocal: false);
-    animationController.reset();
-    animationController.repeat();
-    setState(() {
-      playerState = PlayerState.playing;
-    });
-  }
-
-  Future playPrevious() async {
-    if (selectedIndex > 0 && selectedIndex < files.length) {
-      selectedIndex--;
-    } else if (selectedIndex == 0) {
-      selectedIndex = files.length - 1;
-    }
-    audioURL = files[selectedIndex].path;
-    await audioPlayer.stop();
-    await audioPlayer.play(audioURL, isLocal: false);
-    animationController.reset();
-    animationController.repeat();
-    setState(() {
-      playerState = PlayerState.playing;
     });
   }
 }
