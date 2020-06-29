@@ -13,8 +13,8 @@ class AudioButton extends StatelessWidget {
       minSize: 1,
       padding: EdgeInsets.zero,
       child: Container(
-        width: screenSize.width * 0.18,
-        height: screenSize.width * 0.18,
+        width: screenSize.width * 0.15,
+        height: screenSize.width * 0.15,
         decoration: BoxDecoration(
           color: Color(0xFFF8DEBE),
           shape: BoxShape.circle,

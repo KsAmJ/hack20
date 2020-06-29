@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="disk.svg"
+   inkscape:version="1.0 (4035a4f, 2020-05-01)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 150 150"
+   height="150mm"
+   width="150mm">
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linear-gradient"
+       x1="234.37"
+       y1="468.73999"
+       x2="234.37"
+       gradientUnits="userSpaceOnUse"
+       y2="0">
+      <stop
+         offset="0"
+         stop-color="#393939"
+         id="stop10" />
+      <stop
+         offset="0.24"
+         stop-color="#323232"
+         id="stop12" />
+      <stop
+         offset="0.58"
+         stop-color="#202020"
+         id="stop14" />
+      <stop
+         offset="0.98"
+         stop-color="#010101"
+         id="stop16" />
+      <stop
+         offset="1"
+         id="stop18" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient-2"
+       x1="316.32721"
+       y1="101.93143"
+       x2="410.23566"
+       y2="189.2881"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(0.96503676,1.03623)">
+      <stop
+         offset="0.17"
+         id="stop21" />
+      <stop
+         offset="0.2"
+         stop-color="#060606"
+         id="stop23" />
+      <stop
+         offset="0.23"
+         stop-color="#181818"
+         id="stop25" />
+      <stop
+         offset="0.28"
+         stop-color="#353535"
+         id="stop27" />
+      <stop
+         offset="0.33"
+         stop-color="#5e5e5e"
+         id="stop29" />
+      <stop
+         offset="0.38"
+         stop-color="#929292"
+         id="stop31" />
+      <stop
+         offset="0.44"
+         stop-color="#d1d1d1"
+         id="stop33" />
+      <stop
+         offset="0.48"
+         stop-color="#fff"
+         id="stop35" />
+      <stop
+         offset="0.52"
+         stop-color="#eaeaea"
+         id="stop37" />
+      <stop
+         offset="0.62"
+         stop-color="#b3b3b3"
+         id="stop39" />
+      <stop
+         offset="0.76"
+         stop-color="#5c5c5c"
+         id="stop41" />
+      <stop
+         offset="0.9"
+         id="stop43" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient-3"
+       y1="374.36807"
+       x2="190.40919"
+       y2="374.36807"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0166001,0.98367098)"
+       x1="59.521931">
+      <stop
+         offset="0"
+         id="stop46" />
+      <stop
+         offset="0.11"
+         stop-color="#151515"
+         id="stop48" />
+      <stop
+         offset="0.34"
+         stop-color="#4b4b4b"
+         id="stop50" />
+      <stop
+         offset="0.67"
+         stop-color="#a2a2a2"
+         id="stop52" />
+      <stop
+         offset="1"
+         stop-color="#fff"
+         id="stop54" />
+    </linearGradient>
+    <linearGradient
+       gradientTransform="translate(313.33708,167.91056)"
+       id="linear-gradient-4"
+       y1="102.20002"
+       x2="599"
+       y2="102.20002"
+       gradientUnits="userSpaceOnUse"
+       x1="472.90002">
+      <stop
+         offset="0"
+         stop-color="#929496"
+         id="stop57" />
+      <stop
+         offset="0.12"
+         stop-color="#b0b1b3"
+         id="stop59" />
+      <stop
+         offset="0.25"
+         stop-color="#cccdce"
+         id="stop61" />
+      <stop
+         offset="0.4"
+         stop-color="#e3e3e4"
+         id="stop63" />
+      <stop
+         offset="0.56"
+         stop-color="#f3f3f3"
+         id="stop65" />
+      <stop
+         offset="0.75"
+         stop-color="#fcfcfc"
+         id="stop67" />
+      <stop
+         offset="1"
+         stop-color="#fff"
+         id="stop69" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient-5"
+       x1="-187.87646"
+       y1="618.11536"
+       x2="-88.115982"
+       y2="618.11536"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.2649743,0,0,0.79060893,-324.40846,817.57288)">
+      <stop
+         offset="0"
+         stop-color="#fff"
+         id="stop72" />
+      <stop
+         offset="0.36"
+         stop-color="#efedec"
+         id="stop74" />
+      <stop
+         offset="0.66"
+         stop-color="#d3cecb"
+         id="stop76" />
+      <stop
+         offset="1"
+         stop-color="#d3cecb"
+         id="stop78" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-maximized="0"
+     inkscape:window-y="113"
+     inkscape:window-x="278"
+     inkscape:window-height="943"
+     inkscape:window-width="1252"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="551.42857"
+     inkscape:cx="-24.285714"
+     inkscape:zoom="0.35"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <g
+       style="isolation:isolate"
+       data-name="Layer 1"
+       id="Layer_1"
+       transform="matrix(0.30387681,0,0,0.30490165,12.584088,65.261949)">
+      <g
+         transform="translate(-30.617675,-202.43166)"
+         data-name="Group 43"
+         id="Group_43">
+        <circle
+           style="fill:url(#linear-gradient)"
+           fill="url(#linear-gradient)"
+           opacity="0.52"
+           transform="translate(3.29)"
+           r="234.37"
+           cy="234.37"
+           cx="234.37"
+           data-name="Ellipse 240"
+           id="Ellipse_240" />
+      </g>
+      <circle
+         transform="rotate(-45)"
+         r="232.16"
+         cy="164.30724"
+         cx="120.72066"
+         data-name="Ellipse 241"
+         id="Ellipse_241" />
+      <circle
+         fill="#010101"
+         transform="rotate(-45)"
+         r="229.33"
+         cy="164.30707"
+         cx="120.72049"
+         data-name="Ellipse 242"
+         id="Ellipse_242" />
+      <circle
+         fill="#020202"
+         transform="rotate(-45)"
+         r="226.49001"
+         cy="164.30753"
+         cx="120.72095"
+         data-name="Ellipse 243"
+         id="Ellipse_243" />
+      <circle
+         fill="#030303"
+         transform="rotate(-45)"
+         r="223.64999"
+         cy="164.30725"
+         cx="120.72068"
+         data-name="Ellipse 244"
+         id="Ellipse_244" />
+      <circle
+         fill="#040404"
+         transform="rotate(-45)"
+         r="220.82001"
+         cy="164.30711"
+         cx="120.72054"
+         data-name="Ellipse 245"
+         id="Ellipse_245" />
+      <circle
+         fill="#050505"
+         transform="rotate(-45)"
+         r="217.98"
+         cy="164.30754"
+         cx="120.72097"
+         data-name="Ellipse 246"
+         id="Ellipse_246" />
+      <circle
+         fill="#060606"
+         transform="rotate(-45)"
+         r="215.14999"
+         cy="164.30739"
+         cx="120.72083"
+         data-name="Ellipse 247"
+         id="Ellipse_247" />
+      <circle
+         fill="#070707"
+         transform="rotate(-45)"
+         r="212.31"
+         cy="164.30713"
+         cx="120.72057"
+         data-name="Ellipse 248"
+         id="Ellipse_248" />
+      <circle
+         fill="#080808"
+         transform="rotate(-45)"
+         r="209.47"
+         cy="164.30759"
+         cx="120.721"
+         data-name="Ellipse 249"
+         id="Ellipse_249" />
+      <circle
+         fill="#090909"
+         transform="rotate(-45)"
+         r="206.64"
+         cy="164.30742"
+         cx="120.72086"
+         data-name="Ellipse 250"
+         id="Ellipse_250" />
+      <circle
+         fill="#0a0a0a"
+         transform="rotate(-45)"
+         r="203.8"
+         cy="164.30716"
+         cx="120.72059"
+         data-name="Ellipse 251"
+         id="Ellipse_251" />
+      <circle
+         fill="#0b0b0b"
+         transform="rotate(-45)"
+         r="200.97"
+         cy="164.30701"
+         cx="120.72044"
+         data-name="Ellipse 252"
+         id="Ellipse_252" />
+      <circle
+         fill="#0c0c0c"
+         transform="rotate(-45)"
+         r="198.13"
+         cy="164.30746"
+         cx="120.72089"
+         data-name="Ellipse 253"
+         id="Ellipse_253" />
+      <circle
+         fill="#0d0d0d"
+         transform="rotate(-45)"
+         r="195.28999"
+         cy="164.30719"
+         cx="120.72062"
+         data-name="Ellipse 254"
+         id="Ellipse_254" />
+      <circle
+         fill="#0e0e0e"
+         transform="rotate(-45)"
+         r="192.46001"
+         cy="164.30704"
+         cx="120.72046"
+         data-name="Ellipse 255"
+         id="Ellipse_255" />
+      <circle
+         fill="#0f0f0f"
+         transform="rotate(-45)"
+         r="189.62"
+         cy="164.30748"
+         cx="120.72091"
+         data-name="Ellipse 256"
+         id="Ellipse_256" />
+      <circle
+         fill="#101010"
+         transform="rotate(-45)"
+         r="186.78999"
+         cy="164.30731"
+         cx="120.72074"
+         data-name="Ellipse 257"
+         id="Ellipse_257" />
+      <circle
+         fill="#111111"
+         transform="rotate(-45)"
+         r="183.95"
+         cy="164.30707"
+         cx="120.72049"
+         data-name="Ellipse 258"
+         id="Ellipse_258" />
+      <circle
+         fill="#111111"
+         transform="rotate(-45)"
+         r="181.11"
+         cy="164.30751"
+         cx="120.72094"
+         data-name="Ellipse 259"
+         id="Ellipse_259" />
+      <circle
+         fill="#121212"
+         transform="rotate(-45)"
+         r="178.28"
+         cy="164.30736"
+         cx="120.72078"
+         data-name="Ellipse 260"
+         id="Ellipse_260" />
+      <circle
+         fill="#131313"
+         transform="rotate(-45)"
+         r="175.44"
+         cy="164.3071"
+         cx="120.72054"
+         data-name="Ellipse 261"
+         id="Ellipse_261" />
+      <circle
+         fill="#141414"
+         transform="rotate(-45)"
+         r="172.61"
+         cy="164.30765"
+         cx="120.72107"
+         data-name="Ellipse 262"
+         id="Ellipse_262" />
+      <circle
+         fill="#151515"
+         transform="rotate(-45)"
+         r="169.77"
+         cy="164.30739"
+         cx="120.72083"
+         data-name="Ellipse 263"
+         id="Ellipse_263" />
+      <circle
+         fill="#161616"
+         transform="rotate(-45)"
+         r="166.92999"
+         cy="164.30783"
+         cx="120.72126"
+         data-name="Ellipse 264"
+         id="Ellipse_264" />
+      <circle
+         fill="#171717"
+         transform="rotate(-45)"
+         r="164.10001"
+         cy="164.30768"
+         cx="120.7211"
+         data-name="Ellipse 265"
+         id="Ellipse_265" />
+      <circle
+         fill="#181818"
+         transform="rotate(-45)"
+         r="161.25999"
+         cy="164.3074"
+         cx="120.72083"
+         data-name="Ellipse 266"
+         id="Ellipse_266" />
+      <circle
+         fill="#191919"
+         transform="rotate(-45)"
+         r="158.42999"
+         cy="164.30725"
+         cx="120.72068"
+         data-name="Ellipse 267"
+         id="Ellipse_267" />
+      <circle
+         fill="#1a1a1a"
+         transform="rotate(-76.82)"
+         r="155.59"
+         cy="203.25143"
+         cx="15.957874"
+         data-name="Ellipse 268"
+         id="Ellipse_268" />
+      <circle
+         fill="#1b1b1b"
+         transform="rotate(-76.82)"
+         r="152.75999"
+         cy="203.24947"
+         cx="15.967499"
+         data-name="Ellipse 269"
+         id="Ellipse_269" />
+      <circle
+         style="stroke-width:1.00033"
+         fill="#1c1c1c"
+         transform="rotate(-76.825073)"
+         r="149.96947"
+         cy="203.28954"
+         cx="16.002916"
+         data-name="Ellipse 270"
+         id="Ellipse_270" />
+      <circle
+         style="stroke-width:1.00033"
+         fill="#1d1d1d"
+         transform="rotate(-76.825073)"
+         r="147.12852"
+         cy="203.28697"
+         cx="16.010906"
+         data-name="Ellipse 271"
+         id="Ellipse_271" />
+      <circle
+         style="stroke-width:1.00033"
+         fill="#1e1e1e"
+         transform="rotate(-76.825073)"
+         r="144.29759"
+         cy="203.27458"
+         cx="16.017061"
+         data-name="Ellipse 272"
+         id="Ellipse_272" />
+      <circle
+         style="stroke-width:1.00033"
+         fill="#1f1f1f"
+         transform="rotate(-76.825073)"
+         r="141.45667"
+         cy="203.27431"
+         cx="16.015314"
+         data-name="Ellipse 273"
+         id="Ellipse_273" />
+      <circle
+         style="stroke-width:1.00033"
+         fill="#202020"
+         transform="rotate(-76.825073)"
+         r="138.62573"
+         cy="203.26213"
+         cx="16.020496"
+         data-name="Ellipse 274"
+         id="Ellipse_274" />
+      <circle
+         fill="#212121"
+         transform="rotate(-76.8)"
+         r="135.74001"
+         cy="203.28508"
+         cx="15.99382"
+         data-name="Ellipse 275"
+         id="Ellipse_275" />
+      <circle
+         fill="#222222"
+         transform="rotate(-76.8)"
+         r="132.89999"
+         cy="203.27246"
+         cx="16.001678"
+         data-name="Ellipse 276"
+         id="Ellipse_276" />
+      <circle
+         fill="#232323"
+         transform="rotate(-76.8)"
+         r="130.07001"
+         cy="203.27071"
+         cx="16.01156"
+         data-name="Ellipse 277"
+         id="Ellipse_277" />
+      <path
+         d="m 201.54232,228.00834 c -108.709997,0 -197.149995,-88.47 -197.149995,-197.189996 0,-108.72 88.439998,-197.150004 197.149995,-197.150004 108.71,0 197.15,88.440004 197.15,197.150004 0,108.709996 -88.44,197.189996 -197.15,197.189996 z m 0,-392.58 C 93.782323,-164.60166 6.122325,-76.931656 6.122325,30.818344 c 0,107.749996 87.659998,195.429996 195.419995,195.429996 107.76,0 195.42,-87.67 195.42,-195.429996 0,-107.76 -87.66,-195.420004 -195.42,-195.420004 z"
+         data-name="Path 1114"
+         id="Path_1114" />
+      <path
+         d="m 201.54232,180.38834 c -82.47,0 -149.569995,-67.09 -149.569995,-149.569996 0,-82.48 67.099995,-149.560004 149.569995,-149.560004 82.47,0 149.57,67.090004 149.57,149.560004 0,82.469996 -67.1,149.569996 -149.57,149.569996 z m 0,-297.4 c -81.52,0.02 -147.829995,66.320004 -147.829995,147.830004 0,81.509996 66.309995,147.839996 147.829995,147.839996 81.52,0 147.84,-66.32 147.84,-147.839996 0,-81.52 -66.32,-147.810004 -147.84,-147.810004 z"
+         data-name="Path 1115"
+         id="Path_1115" />
+      <g
+         transform="translate(-30.617675,-202.43166)"
+         data-name="Group 44"
+         id="Group_44">
+        <path
+           style="fill:url(#linear-gradient-2)"
+           fill="url(#linear-gradient-2)"
+           opacity="0.51"
+           transform="translate(-2.6,-15.56)"
+           d="M 312,226.61 443.88,148.28 A 233.16,233.16 0 0 0 358.46,52.53 l -76.7,132.7 A 81.39,81.39 0 0 1 312,226.61 Z"
+           data-name="Path 1116"
+           id="Path_1116" />
+      </g>
+      <g
+         transform="translate(-30.617675,-202.43166)"
+         data-name="Group 45"
+         id="Group_45">
+        <path
+           style="fill:url(#linear-gradient-3)"
+           fill="url(#linear-gradient-3)"
+           opacity="0.49"
+           transform="translate(-2.6,-15.56)"
+           d="M 178.17,303.88 60.51,400.63 a 233,233 0 0 0 33.12,32 l 99.94,-114.95 a 81.21,81.21 0 0 1 -15.4,-13.8 z"
+           data-name="Path 1117"
+           id="Path_1117" />
+      </g>
+      <path
+         fill="#191919"
+         d="m 60.412325,214.61834 c 2.78,2.21 5.6,4.37 8.49,6.45 l 97.739995,-117.47 q -3.24,-1.83 -6.29,-3.929996 z"
+         data-name="Path 1118"
+         id="Path_1118" />
+      <circle
+         transform="rotate(-22.67)"
+         r="104.58"
+         cy="106.12167"
+         cx="174.09377"
+         data-name="Ellipse 278"
+         id="Ellipse_278" />
+      <circle
+         style="stroke-width:0.999585"
+         fill="#7f1c2d"
+         transform="rotate(-76.756198)"
+         r="81.186287"
+         cy="203.23293"
+         cx="16.115614"
+         data-name="Ellipse 279"
+         id="Ellipse_279" />
+      <circle
+         style="stroke-width:0.999585"
+         fill="#801d2e"
+         transform="rotate(-76.756198)"
+         r="80.816437"
+         cy="203.23302"
+         cx="16.116371"
+         data-name="Ellipse 280"
+         id="Ellipse_280" />
+      <circle
+         style="stroke-width:0.999585"
+         fill="#811e2e"
+         transform="rotate(-76.756198)"
+         r="80.446594"
+         cy="203.23105"
+         cx="16.125896"
+         data-name="Ellipse 281"
+         id="Ellipse_281" />
+      <circle
+         style="stroke-width:0.999585"
+         fill="#821f2f"
+         transform="rotate(-76.756198)"
+         r="80.076752"
+         cy="203.23112"
+         cx="16.126654"
+         data-name="Ellipse 282"
+         id="Ellipse_282" />
+      <circle
+         style="stroke-width:0.999585"
+         fill="#831f30"
+         transform="rotate(-76.756198)"
+         r="79.716896"
+         cy="203.23039"
+         cx="16.126644"
+         data-name="Ellipse 283"
+         id="Ellipse_283" />
+      <circle
+         fill="#842031"
+         transform="rotate(-76.661)"
+         r="79.134003"
+         cy="202.89322"
+         cx="15.313666"
+         data-name="Ellipse 284"
+         id="Ellipse_284" />
+      <circle
+         style="stroke-width:0.999585"
+         fill="#852131"
+         transform="rotate(-76.756198)"
+         r="78.977203"
+         cy="203.2308"
+         cx="16.127193"
+         data-name="Ellipse 285"
+         id="Ellipse_285" />
+      <circle
+         style="stroke-width:0.999585"
+         fill="#862232"
+         transform="rotate(-76.756198)"
+         r="78.607353"
+         cy="203.23111"
+         cx="16.126978"
+         data-name="Ellipse 286"
+         id="Ellipse_286" />
+      <circle
+         style="stroke-width:0.999585"
+         fill="#872333"
+         transform="rotate(-76.756198)"
+         r="78.247505"
+         cy="203.23135"
+         cx="16.127197"
+         data-name="Ellipse 287"
+         id="Ellipse_287" />
+      <circle
+         style="stroke-width:0.999585"
+         fill="#882433"
+         transform="rotate(-76.756198)"
+         r="77.877663"
+         cy="203.23145"
+         cx="16.127962"
+         data-name="Ellipse 288"
+         id="Ellipse_288" />
+      <circle
+         style="stroke-width:0.999585"
+         fill="#892534"
+         transform="rotate(-76.756198)"
+         r="77.507812"
+         cy="203.21973"
+         cx="16.135191"
+         data-name="Ellipse 289"
+         id="Ellipse_289" />
+      <circle
+         style="stroke-width:0.999585"
+         fill="#892535"
+         transform="rotate(-76.756198)"
+         r="77.137962"
+         cy="203.21884"
+         cx="16.135719"
+         data-name="Ellipse 290"
+         id="Ellipse_290" />
+      <circle
+         style="stroke-width:0.999585"
+         fill="#8a2635"
+         transform="rotate(-76.756198)"
+         r="76.778114"
+         cy="203.21907"
+         cx="16.135939"
+         data-name="Ellipse 291"
+         id="Ellipse_291" />
+      <circle
+         style="stroke-width:0.999585"
+         fill="#8b2736"
+         transform="rotate(-76.756198)"
+         r="76.408272"
+         cy="203.21941"
+         cx="16.135731"
+         data-name="Ellipse 292"
+         id="Ellipse_292" />
+      <circle
+         style="stroke-width:0.999585"
+         fill="#8c2837"
+         transform="rotate(-76.756198)"
+         r="76.038422"
+         cy="203.21948"
+         cx="16.136488"
+         data-name="Ellipse 293"
+         id="Ellipse_293" />
+      <circle
+         style="stroke-width:0.999585"
+         fill="#8d2937"
+         transform="rotate(-76.756198)"
+         r="75.668571"
+         cy="203.2198"
+         cx="16.136272"
+         data-name="Ellipse 294"
+         id="Ellipse_294" />
+      <circle
+         style="stroke-width:0.999585"
+         fill="#8e2a38"
+         transform="rotate(-76.756198)"
+         r="75.308723"
+         cy="203.22003"
+         cx="16.136492"
+         data-name="Ellipse 295"
+         id="Ellipse_295" />
+      <circle
+         style="stroke-width:0.999585"
+         fill="#8f2a39"
+         transform="rotate(-76.756198)"
+         r="74.938881"
+         cy="203.22012"
+         cx="16.137257"
+         data-name="Ellipse 296"
+         id="Ellipse_296" />
+      <circle
+         style="stroke-width:0.999585"
+         fill="#902b3a"
+         transform="rotate(-76.756198)"
+         r="74.569031"
+         cy="203.21718"
+         cx="16.146545"
+         data-name="Ellipse 297"
+         id="Ellipse_297" />
+      <circle
+         style="stroke-width:0.999585"
+         fill="#912c3a"
+         transform="rotate(-76.756198)"
+         r="74.199188"
+         cy="203.21727"
+         cx="16.14731"
+         data-name="Ellipse 298"
+         id="Ellipse_298" />
+      <circle
+         style="stroke-width:0.999585"
+         fill="#922d3b"
+         transform="rotate(-76.756198)"
+         r="73.83934"
+         cy="203.2175"
+         cx="16.14753"
+         data-name="Ellipse 299"
+         id="Ellipse_299" />
+      <path
+         fill="#7f2b39"
+         d="m 210.78232,30.818344 a 9.23,9.23 0 1 1 -9.23,-9.22 9.23,9.23 0 0 1 9.23,9.22 z"
+         data-name="Path 1119"
+         id="Path_1119" />
+    </g>
+  </g>
+</svg>
